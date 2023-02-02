@@ -32,7 +32,7 @@ server.use(express.json())
 //     next()
 // })
 
-mongoose.connect(`mongodb://mongo:UsMPbpCtJa377swjbuH2@containers-us-west-125.railway.app:7770/${process.env.DB_NAME}`)
+mongoose.connect(`mongodb://mongo:UsMPbpCtJa377swjbuH2@containers-us-west-125.railway.app:7770/?retryWrites=true&w=majority`)
 .then((value)=>{
     console.log("Connected to MongoDB")
 })
