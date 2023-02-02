@@ -291,5 +291,5 @@ server.listen(`${PORT}`, (err)=>{
     if(err){
         return console.log(err)
     }
-    console.log("server started on port: 5001")
+    console.log(`server started on port: ${PORT}`)
 })
