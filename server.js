@@ -3,6 +3,7 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const nodemailer =  require("nodemailer")
 const crypto = require("crypto")
+require("dotenv").config({})
 const PORT = process.env.PORT
 
 const users = [{"id": 1,"name": "moses","gender":"male"},{"id": 2,"name": "emeka","gender":"male"},{"id": 3,"name": "tunde","gender":"male"},{"id":4,"name":"sarah","gender":"female"}]
@@ -286,7 +287,7 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(`0.0.0.0:${PORT}`, (err)=>{
+server.listen(`${PORT}`, (err)=>{
     if(err){
         return console.log(err)
     }
