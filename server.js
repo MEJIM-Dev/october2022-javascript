@@ -31,7 +31,7 @@ server.use(express.json())
 //     next()
 // })
 
-mongoose.connect("mongodb://localhost:27017/Firstdb")
+mongoose.connect("mongodb://mongo:UsMPbpCtJa377swjbuH2@containers-us-west-125.railway.app:7770")
 .then((value)=>{
     console.log("Connected to MongoDB")
 })
@@ -285,9 +285,9 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(5000, (err)=>{
+server.listen(5001, (err)=>{
     if(err){
         return console.log(err)
     }
-    console.log("server started on port: 5000")
+    console.log("server started on port: 5001")
 })
