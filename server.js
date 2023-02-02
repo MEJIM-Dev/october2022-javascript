@@ -4,7 +4,6 @@ const mongoose = require("mongoose")
 const nodemailer =  require("nodemailer")
 const crypto = require("crypto")
 require("dotenv").config({})
-const PORT = process.env.PORT
 
 const users = [{"id": 1,"name": "moses","gender":"male"},{"id": 2,"name": "emeka","gender":"male"},{"id": 3,"name": "tunde","gender":"male"},{"id":4,"name":"sarah","gender":"female"}]
 const months = ["january","febuary","march","april","may","june","july","august","septempber","october","november","december"]
