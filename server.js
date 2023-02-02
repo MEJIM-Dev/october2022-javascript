@@ -287,9 +287,9 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(`${PORT}`, (err)=>{
+server.listen(procees.env.PORT || 5000, (err)=>{
     if(err){
         return console.log(err)
     }
-    console.log(`server started on port: ${PORT}`)
+    console.log(`server started succesfully`)
 })
