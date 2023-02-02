@@ -1,0 +1,24 @@
+ name
+public static String getDateInRequestFormat(Date date){
+    String[] split = date.toString().split(" ");
+    String[] dateObj = new String[3];
+    String value = "";
+    for (int i = 0; i < split.length; i++) {
+        if(i==1){
+            dateObj[1]=split[i];
+            continue;
+        }
+        if(i==2){
+            dateObj[0]=split[i];
+            continue;
+        }
+        if(i==5){
+            dateObj[2]=split[i];
+            continue;
+        }
+    }
+    for (String val:dateObj) {
+        value+=val+" ";
+    }
+    return value.trim();
+}
