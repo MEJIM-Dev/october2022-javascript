@@ -286,7 +286,7 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(process.env.PORT || 5001, (err)=>{
+server.listen(process.env.PORT? `https://october2022-javascript.up.railway.app/`+process.env.PORT : 5001, (err)=>{
     if(err){
         return console.log(err)
     }
