@@ -285,7 +285,7 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(5001, (err)=>{
+server.listen(`0.0.0.0:${PORT}`, (err)=>{
     if(err){
         return console.log(err)
     }
