@@ -32,7 +32,7 @@ server.use(express.json())
 //     next()
 // })
 
-mongoose.connect("mongodb://mongo:UsMPbpCtJa377swjbuH2@containers-us-west-125.railway.app:7770")
+mongoose.connect(`mongodb://mongo:UsMPbpCtJa377swjbuH2@containers-us-west-125.railway.app:7770/${process.env.DB_NAME}`)
 .then((value)=>{
     console.log("Connected to MongoDB")
 })
@@ -286,7 +286,7 @@ server.get("/about",function(req,res){
     res.json({"msg":"about"})
 })
 
-server.listen(procees.env.PORT || 5000, (err)=>{
+server.listen(process.env.PORT || 5001, (err)=>{
     if(err){
         return console.log(err)
     }
